@@ -40,7 +40,8 @@ lazy val server = project
       Dependencies.Http4s.dsl,
       Dependencies.Http4s.circe
     )
-  ).dependsOn(engine)
+  )
+  .dependsOn(engine)
 
 lazy val docs = project
   .in(file("docs"))
@@ -53,4 +54,3 @@ lazy val docs = project
     git.remoteRepo := "https://github.com/hacker-cup/poc-server.git"
   )
   .enablePlugins(MicrositesPlugin)
-

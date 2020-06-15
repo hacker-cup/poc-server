@@ -3,6 +3,7 @@ package hacker.cup
 import sbt._
 
 object Dependencies {
+
   object Http4s {
     private val version = "0.21.4"
     val dsl = "org.http4s" %% "http4s-dsl" % version
@@ -10,15 +11,18 @@ object Dependencies {
     val client = "org.http4s" %% "http4s-blaze-client" % version
     val circe = "org.http4s" %% "http4s-circe" % version
   }
+
   object FS2 {
     private val version = "2.4.0"
     val core = "co.fs2" %% "fs2-core" % version
   }
+
   object Cats {
     private val version = "2.0.0"
     val core = "org.typelevel" %% "cats-core" % version
     val effect = "org.typelevel" %% "cats-effect" % version
   }
+
   object Circe {
     private val version = "0.12.3"
     val core: ModuleID = "io.circe" %% "circe-core" % version

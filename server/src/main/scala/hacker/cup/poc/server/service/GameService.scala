@@ -7,6 +7,7 @@ import org.http4s.circe.CirceEntityEncoder
 import org.http4s.dsl.Http4sDsl
 
 object GameService extends Http4sDsl[IO] with CirceEntityEncoder {
+
   def routes(implicit timer: Timer[IO]): HttpRoutes[IO] = HttpRoutes.of[IO] {
     case GET -> Root =>
       // Stream back our game stream

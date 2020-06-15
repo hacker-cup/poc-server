@@ -9,6 +9,7 @@ import org.http4s.server.blaze.BlazeServerBuilder
 import scala.concurrent.ExecutionContext
 
 object HttpService {
+
   def routes(implicit timer: Timer[IO]): HttpApp[IO] =
     Router[IO](
       "game" -> GameService.routes
