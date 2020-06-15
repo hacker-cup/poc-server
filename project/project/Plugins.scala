@@ -19,4 +19,8 @@ object Plugins {
     private val version = "0.14.10"
     val core: ModuleID = "com.eed3si9n" % "sbt-assembly" % version
   }
+  object Microsite {
+    private val version = "1.1.5"
+    val core: ModuleID = "com.47deg"  % "sbt-microsites" % version
+  }
 }
