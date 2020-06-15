@@ -9,6 +9,9 @@ import io.circe.generic.JsonCodec
 case class GameState(
   entities: List[Entity]
 ) {
+  /**
+    * Update entity given dt (milliseconds)
+    */
   def update(dt: Long): GameState = GameState(
     entities = entities.map(_.update(dt))
   )
