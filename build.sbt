@@ -14,7 +14,7 @@ lazy val root = project
   .settings(
     commonSettings
   )
-  .aggregate(server)
+  .aggregate(server, docs)
 
 lazy val server = project
   .in(file("server"))
