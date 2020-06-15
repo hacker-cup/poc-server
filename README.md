@@ -1,3 +1,3 @@
-# poc-server
+# POC Server
 
-POC server
+POC server for hacker cup (name pending).

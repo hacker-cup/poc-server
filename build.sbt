@@ -1,5 +1,5 @@
+import microsites._
 import hacker.cup.Dependencies
-
 
 lazy val commonSettings = Seq(
   scalaVersion := "2.13.2",
@@ -25,4 +25,13 @@ lazy val server = project
       Dependencies.Http4s.server
     )
   )
+
+lazy val docs = project
+  .in(file("docs"))
+  .settings(
+    micrositeName := "POC Server",
+    micrositeCompilingDocsTool := WithTut,
+    micrositeHighlightTheme := "atom-one-light"
+  )
+  .enablePlugins(MicrositesPlugin)
 
