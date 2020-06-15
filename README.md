@@ -1,3 +1,0 @@
-# poc-server
-
-POC server
