@@ -16,15 +16,31 @@ lazy val root = project
   )
   .aggregate(server, docs)
 
+lazy val engine = project
+  .in(file("engine"))
+  .settings(
+    name := "poc-engine",
+    commonSettings,
+    libraryDependencies ++= Seq(
+      Dependencies.Cats.core,
+      Dependencies.Cats.effect,
+      Dependencies.FS2.core,
+      Dependencies.Circe.core,
+      Dependencies.Circe.generic
+    )
+  )
+
 lazy val server = project
   .in(file("server"))
   .settings(
     name := "poc-server",
     commonSettings,
     libraryDependencies ++= Seq(
-      Dependencies.Http4s.server
+      Dependencies.Http4s.server,
+      Dependencies.Http4s.dsl,
+      Dependencies.Http4s.circe
     )
-  )
+  ).dependsOn(engine)
 
 lazy val docs = project
   .in(file("docs"))
