@@ -20,3 +20,5 @@ Run `sbt`, and then use any of the following commands:
  * `test`: unit test
  * `scalafmtAll/scalafmtSbt`: lint
  * `dependencyUpdates`: check for dependency updates
+ * `microsite`: build static documentation page
+ * `publishMicrosite`: build and publish documentation to gh-pages (proper ssh keys must be set up)

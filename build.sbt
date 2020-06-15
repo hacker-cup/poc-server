@@ -31,7 +31,10 @@ lazy val docs = project
   .settings(
     micrositeName := "POC Server",
     micrositeCompilingDocsTool := WithTut,
-    micrositeHighlightTheme := "atom-one-light"
+    micrositeBaseUrl := "poc-server",
+    micrositeHomepage := "https://hacker-cup.github.io/poc-server/",
+    micrositeHighlightTheme := "atom-one-light",
+    git.remoteRepo := "https://github.com/hacker-cup/poc-server.git"
   )
   .enablePlugins(MicrositesPlugin)
 
